@@ -1,0 +1,440 @@
+<html>
+	<head>
+		<title>Cerdas Cermat RS UMMI</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="css/uikit.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		
+		<script type="text/javascript" src="js/uikit.min.js"></script>
+		<script type="text/javascript" src="js/uikit-icons.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slim.min.js"></script>
+		
+		<style>
+			html { font-size: 62.5%; }
+			body { font-size: 1em;}
+
+			div {
+				font-family: Futura-Bold;
+				/*font-size:48px;*/
+				padding:5px;
+				text-align:center;
+				color: white;
+			}
+
+			.button {
+				background-color: #4CAF50;
+				border: none;
+				color: white;
+				padding: 15px 32px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 150%;
+			}
+
+			.buttonRegu {
+				background-color: #053C82;
+				border: 1px;
+				color: white;
+				padding: 15px 30px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 50%;
+				width : 50%;
+			}
+
+			.buttonPlus {
+				background-color: #000000;
+				border: 1px;
+				color: black;
+				padding: 20px 30px 20px 30px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 20px;
+			}
+
+			.buttonMin {
+				background-color: #FF0000;
+				border: 1px;
+				color: white;
+				padding: 20px 30px 20px 30px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 20px;
+			}
+
+			table {
+			  width: 100%;
+			}
+
+			td {
+				background-color: #E3E7F6;
+				text-align: center;
+			}
+
+			h1 {
+			  background-color: #0539FB	;
+			  color: white;
+			  text-align: center;
+			  font-size:50px;
+			}
+
+			.nilai {
+				font-size:100px;
+				text-align: center;
+				color: white;
+			}
+
+			.judul {
+				font-size:50px;
+				text-align: center;
+				vertical-align: center;
+			}	
+			</style>
+		</head>
+		<body style="background: #54A0FF; color: #ffffff;">
+			<div class="uk-container-expand uk-height-viewport">
+				<div class="uk-grid uk-grid-small">
+					<div class="uk-width-expand"><center>
+						<span id="title" style="font-size: 60pt;">
+							CERDAS CERMAT RS UMMI
+							<hr class="uk-divider-icon" style="max-width: 50%">
+						</span>
+					</div>
+				</div>
+
+				<div class="uk-grid uk-grid-small uk-text-center">
+					<div id = "team1" class="uk-width-expand uk-container-center">
+						<center><h1 id="nameTeam1">REGU A</h1></center>
+						<div class="uk-inline uk-dark">
+							<br><br><br><br><br><br><br>
+							<div class="uk-position-center">
+								<span id="score1" class ="nilai">0</span>
+							</div>
+						</div>
+						<br><br><br>
+						<div class="uk-button-group">
+							<button class="buttonMin " id="substractScore1"><i class="fa fa-minus" style="color: #ffffff;"></i></button>
+							<button class="buttonPlus " id="addScore1"><i class="fa fa-plus" style="color: #ffffff;"></i></button>
+						</div>
+					</div>
+
+					<div id = "team2" class="uk-width-expand uk-container-center">
+						<center><h1 id="nameTeam2">REGU B</h1></center>
+						<div class="uk-inline uk-dark">
+							<br><br><br><br><br><br><br>
+							<div class="uk-position-center">
+								<span id="score2" class ="nilai">0</span>
+							</div>
+						</div>
+						<br><br><br>
+						<div class="uk-button-group">
+							<button class="buttonMin " id="substractScore2"><i class="fa fa-minus" style="color: #ffffff;"></i></button>
+							<button class="buttonPlus " id="addScore2"><i class="fa fa-plus" style="color: #ffffff;"></i></button>
+						</div>
+					</div>
+
+					<div id = "team3" class="uk-width-expand uk-container-center">
+						<center><h1 id="nameTeam3">REGU C</h1></center>
+						<div class="uk-inline uk-dark">
+							<br><br><br><br><br><br><br>
+							<div class="uk-position-center">
+								<span id="score3" class ="nilai">0</span>
+							</div>						
+						</div>
+						<br><br><br>
+						<div class="uk-button-group">
+							<button class="buttonMin " id="substractScore3"><i class="fa fa-minus" style="color: #ffffff;"></i></button>
+							<button class="buttonPlus " id="addScore3"><i class="fa fa-plus" style="color: #ffffff;"></i></button>
+						</div>
+					</div>
+
+					<div id = "team4" class="uk-width-expand uk-container-center">
+						<center><h1 id="nameTeam4">REGU D</h1></center>
+						<div class="uk-inline uk-dark">
+							<br><br><br><br><br><br><br>
+							<div class="uk-position-center">
+								<span id="score4" class ="nilai">0</span>
+							</div>
+						</div>
+						<br><br><br>
+						<div class="uk-button-group">
+							<button class="buttonMin " id="substractScore4"><i class="fa fa-minus" style="color: #ffffff;"></i></button>
+							<button class="buttonPlus " id="addScore4"><i class="fa fa-plus" style="color: #ffffff;"></i></button>
+						</div>
+					</div>
+
+					<div id = "team5" class="uk-width-expand uk-container-center">
+						<center><h1 id="nameTeam5">REGU E</h1></center>
+						<div class="uk-inline uk-dark">
+							<br><br><br><br><br><br><br>
+							<div class="uk-position-center">
+								<span id="score5" class ="nilai">0</span>
+							</div>
+						</div>
+						<br><br><br>
+						<div class="uk-button-group">
+							<button class="buttonMin" id="substractScore5"><i class="fa fa-minus" style="color: #ffffff;"></i></button>
+							<button class="buttonPlus" id="addScore5"><i class="fa fa-plus" style="color: #ffffff;"></i></button>
+						</div>
+					</div>
+				</div>
+
+		<br>
+		<center>
+			<br>
+			<button class="uk-button uk-button-default uk-margin-small-bottom" id="toggle1" style="color: #ffffff;">A</button>
+			<button class="uk-button uk-button-default uk-margin-small-bottom" id="toggle2" style="color: #ffffff;">B</button>
+			<button class="uk-button uk-button-default uk-margin-small-bottom" id="toggle3" style="color: #ffffff;">C</button>
+			<button class="uk-button uk-button-default uk-margin-small-bottom" id="toggle4" style="color: #ffffff;">D</button>
+			<button class="uk-button uk-button-default uk-margin-small-bottom" id="toggle5" style="color: #ffffff;">E</button>
+		</center>
+		<center>
+			<br>
+			<button class="uk-button uk-button-default uk-margin-small-bottom" id="showTimer" style="color: #ffffff;">SHOW</button>
+			<button class="uk-button uk-button-default uk-margin-small-bottom" id="hideTimer" style="display: none;">HIDE</button>
+			<button class="uk-button uk-button-default uk-margin-small-bottom" id="startTime" style="display: none;">START</button>
+			<button class="uk-button uk-button-default uk-margin-small-bottom" id="resetTime" style="display: none;">RESET</button>
+		</center>
+		<span id="timer" style="display: none; font-size: 80pt;">
+			<span id="timeUp" style="display: none; font-size: 80pt;">Waktu Habis</span>
+			<span id="secondLeft">00</span>
+		</span>
+
+	</div>
+	
+	<script type="text/javascript">
+		$('#nameTeam1').on('click', function() {
+	    	var name = prompt("Masukkan Nama Tim 1");
+	    	console.log(name);
+	    	if (name !== null && name.trim() !== "") {
+	    		$('#nameTeam1').html(name);
+	    	}
+		});
+
+		$('#nameTeam2').on('click', function() {
+	    	var name = prompt("Masukkan Nama Tim 2");
+	    	console.log(name);
+	    	if (name !== null && name.trim() !== "") {
+	    		$('#nameTeam2').html(name);
+	    	}
+		});
+
+		$('#nameTeam3').on('click', function() {
+	    	var name = prompt("Masukkan Nama Tim 3");
+	    	console.log(name);
+	    	if (name !== null && name.trim() !== "") {
+	    		$('#nameTeam3').html(name);
+	    	}
+		});
+
+		$('#nameTeam4').on('click', function() {
+	    	var name = prompt("Masukkan Nama Tim 4");
+	    	console.log(name);
+	    	if (name !== null && name.trim() !== "") {
+	    		$('#nameTeam4').html(name);
+	    	}
+		});
+
+		$('#nameTeam5').on('click', function() {
+	    	var name = prompt("Masukkan Nama Tim 5");
+	    	console.log(name);
+			if (name !== null && name.trim() !== "") {
+	    		$('#nameTeam5').html(name);
+	    	}
+		});
+
+		$('#button_input1').on('click', function() {
+	    $('#file_input1').trigger('click');
+	    
+		});
+
+		$('#button_input2').on('click', function() {
+	    $('#file_input2').trigger('click');
+	    
+		});
+
+		$('#button_input3').on('click', function() {
+	    $('#file_input3').trigger('click');
+	    
+		});
+
+		$('#button_input4').on('click', function() {
+	    $('#file_input4').trigger('click');
+	    
+		});
+
+		$('#button_input5').on('click', function() {
+	    $('#file_input5').trigger('click');
+	    
+		});
+
+		$('#addScore1').on('click', function() {
+			$add = parseInt($("#score1").text()) + parseInt(100);
+			$('#score1').html($add);
+		});
+
+		$('#substractScore1').on('click', function() {
+			$substract = parseInt($("#score1").text()) - parseInt(100);
+			$('#score1').html($substract);
+		});
+
+		$('#addScore2').on('click', function() {
+			$add = parseInt($("#score2").text()) + parseInt(100);
+			$('#score2').html($add);
+		});
+
+		$('#substractScore2').on('click', function() {
+				$substract = parseInt($("#score2").text()) - parseInt(100);
+		    	$('#score2').html($substract);
+		});
+
+		$('#addScore3').on('click', function() {
+			$add = parseInt($("#score3").text()) + parseInt(100);
+			$('#score3').html($add);
+		});
+
+		$('#substractScore3').on('click', function() {
+			$substract = parseInt($("#score3").text()) - parseInt(100);
+			$('#score3').html($substract);		
+		});
+
+		$('#addScore4').on('click', function() {
+			$add = parseInt($("#score4").text()) + parseInt(100);
+			$('#score4').html($add);
+		});
+
+		$('#substractScore4').on('click', function() {
+			$substract = parseInt($("#score4").text()) - parseInt(100);
+			$('#score4').html($substract);
+		});
+
+		$('#addScore5').on('click', function() {
+			$add = parseInt($("#score5").text()) + parseInt(100);
+			$('#score5').html($add);
+		});
+
+		$('#substractScore5').on('click', function() {
+			$substract = parseInt($("#score5").text()) - parseInt(100);
+			$('#score5').html($substract);
+		});
+
+		var out;
+		var x;
+		const music = new Audio('10 detik.mp3');
+
+		function timerStart(){
+			$('#startTime').hide();
+			$('#resetTime').show();
+
+			var seconds = 11 * 1000;
+			
+			out = setTimeout(function(){
+				$('#timeUp').show();	
+				$('#secondLeft').hide();	
+				$('#resetTime').hide();
+				$('#startTime').show();
+
+				console.log("set");
+			}, seconds);
+
+			var countDown = new Date().getTime()+seconds;
+			x = setInterval(function() {
+				
+				var left = countDown - new Date().getTime();
+				var seconds_remaining = Math.floor((left % (1000 * 60)) / 1000);
+
+				if (seconds_remaining>=10 && seconds_remaining>0){
+					$('#secondLeft').html(seconds_remaining);
+				}
+				else if(seconds_remaining>0){
+					$('#secondLeft').html("0"+seconds_remaining);
+				}
+				else if(seconds_remaining<=0){
+					$('#timeUp').show();
+					$('#secondLeft').hide();	
+					clearInterval(x);
+				}    				
+
+				//if (left < 0) {
+				//}
+			}, 100);
+
+		}
+
+		function timerStop(){
+			clearTimeout(out);
+			clearInterval(x);
+					
+			$('#timeUp').hide();
+			$('#secondLeft').show();
+			console.log("zero");
+			music.currentTime = 0;
+		}		
+
+		$('#showTimer').on('click', function() {
+			$('#showTimer').hide();
+
+			if('#timeUp:visible'){
+				timerStop();
+			}
+
+			$('#timer').show();
+			$('#hideTimer').show();
+			$('#startTime').show();
+			$('#resetTimeTime').show();
+
+		});
+
+		$('#hideTimer').on('click', function() {
+			$('#showTimer').show();
+
+			$('#timer').hide();
+			$('#hideTimer').hide();
+			$('#startTime').hide();
+			$('#resetTimeTime').show();
+		});
+
+		$('#toggle1').on('click', function() {
+			$('#team1').toggle();
+		});
+
+		$('#toggle2').on('click', function() {
+			$('#team2').toggle();
+		});
+
+		$('#toggle3').on('click', function() {
+			$('#team3').toggle();
+		});
+
+		$('#toggle4').on('click', function() {
+			$('#team4').toggle();
+		});
+
+		$('#toggle5').on('click', function() {
+			$('#team5').toggle();
+		});
+
+		$('#startTime').on('click', function() {
+			timerStop();
+			timerStart();
+			music.play();
+		});
+
+		
+		$('#resetTime').on('click', function() {
+			timerStop();
+			$('#resetTime').hide();
+			$('#startTime').show();
+			music.pause();
+			music.currentTime = 0;
+		});
+
+	</script>
+</body>
+</html>
